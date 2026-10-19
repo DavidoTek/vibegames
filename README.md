@@ -7,6 +7,7 @@ Plain static HTML/CSS/JavaScript: no build step, no dependencies, no backend.
 |------|--------|
 | Sudoku 3D | `sudoku3d/` |
 | Disco Effects | `disco-effects/` |
+| Transport Racer | `transport-racer/` |
 
 ## Run locally
 

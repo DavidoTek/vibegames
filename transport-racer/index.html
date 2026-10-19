@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Transport Racer</title>
+  <link rel="icon" href="thumbnail.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <nav class="corner">
+    <a class="chip" href="../" title="Back to all games">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      <span>Games</span>
+    </a>
+    <button id="mute" class="chip icon" type="button" title="Sound on/off (M)" aria-pressed="false">
+      <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+      <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>
+    </button>
+    <button id="pause" class="chip icon" type="button" title="Pause (P)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+    </button>
+  </nav>
+
+  <div id="hud" hidden>
+    <div class="standing card">
+      <div class="pos"><b id="pos">1</b><sup id="pos-suf">st</sup><small>/3</small></div>
+      <div id="time" class="time">0:00.0</div>
+    </div>
+    <div class="progress" aria-hidden="true">
+      <div class="line"></div>
+      <i class="mark r0"></i><i class="mark r1"></i><i class="mark you"></i>
+    </div>
+    <div class="dash card">
+      <div class="speed"><b id="kmh">0</b><small>km/h</small></div>
+      <div class="meter"><span>Sway</span><div class="bar"><div id="sway"></div></div></div>
+      <div id="wagons" class="wagons"></div>
+      <div id="draft" class="draft">Slipstream</div>
+    </div>
+    <div class="points card">
+      <div id="lanes" class="lanes"><i></i><i></i><i></i></div>
+      <div id="points-label" class="points-label">Junction</div>
+    </div>
+  </div>
+
+  <div id="msg" class="msg" aria-live="polite"></div>
+
+  <div id="touch" hidden>
+    <div class="cluster">
+      <button type="button" data-act="left" aria-label="Points left">&#9664;</button>
+      <button type="button" data-act="right" aria-label="Points right">&#9654;</button>
+    </div>
+    <div class="cluster small">
+      <button type="button" data-act="drop">Drop</button>
+      <button type="button" data-act="horn">Horn</button>
+    </div>
+    <div class="cluster">
+      <button type="button" data-act="brake" class="brake">Brake</button>
+      <button type="button" data-act="throttle" class="go">Power</button>
+    </div>
+  </div>
+
+  <section id="panel" class="panel"></section>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>

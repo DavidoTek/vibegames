@@ -1,0 +1,8 @@
+{
+  "name": "Transport Racer",
+  "description": "Race a cargo train against two rival freights on a three-track main line. Read the signals, set the points, and balance speed against swaying cargo.",
+  "tags": ["racing", "3D", "trains"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#ff9f43",
+  "controls": "W/S power & brake · A/D set points · X drop wagon · H horn · P pause"
+}

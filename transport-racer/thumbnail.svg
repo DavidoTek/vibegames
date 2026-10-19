@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d2350"/><stop offset="0.55" stop-color="#a2507a"/><stop offset="1" stop-color="#f6a868"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8a078" stop-opacity="0.85"/><stop offset="1" stop-color="#e8a078" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="640" height="140" fill="url(#sky)"/>
+<circle cx="450" cy="112" r="26" fill="#ffe0a0"/>
+<path d="M0 140 L40 108 L90 124 L150 92 L210 120 L260 100 L330 126 L390 96 L450 118 L520 90 L580 116 L640 100 L640 140 Z" fill="#4f3a62"/>
+<path d="M0 140 L60 124 L120 132 L190 116 L250 130 L320 118 L400 132 L470 120 L540 130 L600 118 L640 128 L640 140 Z" fill="#6c4a6e"/>
+<rect y="140" width="640" height="220" fill="#5c7a3e"/>
+<!-- track bed fanning out from the vanishing point -->
+<polygon points="300,140 340,140 760,360 -120,360" fill="#6b5a48"/>
+<polygon points="304,140 336,140 700,360 -60,360" fill="#8a8075"/>
+<!-- sleepers -->
+<g fill="#5b4434">
+<polygon points="-30,346 690,346 684,338 -24,338"/><polygon points="20,318 620,318 615,311 25,311"/><polygon points="70,292 570,292 566,286 74,286"/>
+<polygon points="114,268 526,268 523,263 117,263"/><polygon points="152,247 488,247 486,243 154,243"/><polygon points="186,228 454,228 452,225 188,225"/>
+<polygon points="215,212 425,212 423,209 217,209"/><polygon points="240,197 400,197 399,195 241,195"/><polygon points="262,184 378,184 377,182 263,182"/>
+</g>
+<!-- rails: three tracks -->
+<g stroke="#d4d8e2" stroke-width="3" fill="none">
+<path d="M310 140 L40 360 M313 140 L120 360"/>
+<path d="M318 140 L270 360 M322 140 L370 360"/>
+<path d="M327 140 L520 360 M330 140 L600 360"/>
+</g>
+<rect y="132" width="640" height="40" fill="url(#haze)"/>
+<!-- signal gantry -->
+<g>
+<rect x="232" y="150" width="4" height="36" fill="#3a3d48"/><rect x="404" y="150" width="4" height="36" fill="#3a3d48"/>
+<rect x="232" y="146" width="176" height="8" fill="#3a3d48"/>
+<rect x="264" y="153" width="16" height="18" fill="#15161c"/><rect x="312" y="153" width="16" height="18" fill="#15161c"/><rect x="360" y="153" width="16" height="18" fill="#15161c"/>
+<circle cx="272" cy="160" r="9" fill="#5dff7c" opacity="0.3"/><circle cx="272" cy="160" r="5" fill="#5dff7c"/>
+<circle cx="320" cy="160" r="9" fill="#ff4a3c" opacity="0.3"/><circle cx="320" cy="160" r="5" fill="#ff4a3c"/>
+<circle cx="368" cy="160" r="9" fill="#5dff7c" opacity="0.3"/><circle cx="368" cy="160" r="5" fill="#5dff7c"/>
+</g>
+<!-- rival train ahead on the right track -->
+<g>
+<polygon points="352,176 380,176 384,170 356,170" fill="#ff9fc0"/>
+<rect x="352" y="176" width="28" height="24" fill="#e2457f"/>
+<rect x="352" y="186" width="28" height="4" fill="#4a0d2a"/>
+</g>
+<!-- player's train: wagons snaking into a curve, loco furthest away -->
+<g>
+<polygon points="300,182 330,182 336,175 306,175" fill="#ffd27a"/><rect x="300" y="182" width="30" height="28" fill="#ffb238"/><rect x="300" y="194" width="30" height="4" fill="#2a2d3e"/>
+<polygon points="286,206 330,206 338,196 294,196" fill="#4f9ae8"/><rect x="286" y="206" width="44" height="34" fill="#2f7fd8"/>
+<polygon points="268,240 332,240 342,226 278,226" fill="#5fcf8a"/><rect x="268" y="240" width="64" height="50" fill="#3aa86b"/>
+<polygon points="244,286 336,286 350,266 258,266" fill="#ff5e4f"/><rect x="244" y="286" width="92" height="74" fill="#d94b3d"/>
+<rect x="244" y="345" width="92" height="15" fill="#1b1b22"/>
+<g stroke="#7a2a22" stroke-width="3"><path d="M267 296 V340 M290 296 V340 M313 296 V340"/></g>
+</g>
+<!-- speed sign -->
+<rect x="566" y="190" width="4" height="70" fill="#555"/>
+<circle cx="568" cy="176" r="22" fill="#e23a2e"/><circle cx="568" cy="176" r="17" fill="#fff"/>
+<text x="568" y="183" font-family="sans-serif" font-weight="bold" font-size="17" text-anchor="middle" fill="#111">140</text>
+</svg>

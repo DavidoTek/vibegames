@@ -81,3 +81,10 @@ console for errors and try both a desktop and a phone-sized viewport.
   beat clock, crossfades, blackout, HUD/help and input. Effects draw into a
   persistent offscreen canvas (for motion trails), which is copied to the
   visible canvas each frame.
+- `transport-racer/`: `game.js` holds everything. It is a pseudo-3D "segment"
+  racer on Canvas 2D (no three.js, to stay dependency-free). `Track` builds
+  segments (curve and height), junction zones, obstacles, cargo cranes and signs
+  from a seeded RNG. `Train` handles physics (mass grows with wagons) and keeps a
+  lateral-position history so wagons follow the loco through crossovers. Road
+  polygons are batched per colour into `Path2D`s. Sprites and boxes are sorted
+  far to near and clipped at hill crests via `clipY`.
