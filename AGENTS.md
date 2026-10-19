@@ -95,3 +95,11 @@ console for errors and try both a desktop and a phone-sized viewport.
   lateral-position history so wagons follow the loco through crossovers. Road
   polygons are batched per colour into `Path2D`s. Sprites and boxes are sorted
   far to near and clipped at hill crests via `clipY`.
+- `jumper/`: side-scrolling platformer rendered with three.js (vendored in
+  `jumper/vendor/`, the only game with a library). `levels.js` holds the ASCII
+  level maps and their colour themes; `game.js` has the rest. `World` turns a
+  map into a collision grid plus meshes (static tiles as `InstancedMesh`es) and
+  owns everything per-level, so `dispose()` can drop it; geometries/materials
+  flagged with `shared()` survive level changes. Physics is tile-based AABB in
+  tile units (x = centre, y = feet) with sub-stepping; jump numbers are tuned so
+  maps can assume about 3 tiles up and 6 across.

@@ -1,0 +1,8 @@
+{
+  "name": "Jumper",
+  "description": "A side-scrolling platformer with chunky 3D blocks. Run, jump and stomp through three worlds, collect coins and hunt down the three hidden gems in every level.",
+  "tags": ["platformer", "3D", "three.js"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#ff7a3d",
+  "controls": "A/D move · Space jump (hold for higher) · S drop through planks · R restart · P pause"
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Jumper</title>
+  <link rel="icon" href="thumbnail.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <div id="hurt" aria-hidden="true"></div>
+
+  <nav class="corner">
+    <a class="chip" href="../" title="Back to all games">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      <span>Games</span>
+    </a>
+    <button id="mute" class="chip icon" type="button" title="Sound on/off (M)" aria-pressed="false">
+      <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+      <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>
+    </button>
+    <button id="pause" class="chip icon" type="button" title="Pause (P)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+    </button>
+  </nav>
+
+  <div id="hud" class="card" hidden>
+    <div id="hearts" class="hearts" aria-label="Hearts"></div>
+    <div class="stats">
+      <span class="coin-icon" aria-hidden="true"></span><b id="coins">0/0</b>
+      <span id="gems" class="gems" aria-label="Gems"></span>
+    </div>
+    <div id="time" class="time">0:00.0</div>
+  </div>
+
+  <div id="msg" class="msg" aria-live="polite"></div>
+
+  <div id="touch" hidden>
+    <div class="cluster">
+      <button type="button" data-act="left" aria-label="Move left">&#9664;</button>
+      <button type="button" data-act="right" aria-label="Move right">&#9654;</button>
+    </div>
+    <div class="cluster">
+      <button type="button" data-act="down" class="down" aria-label="Drop through">&#9660;</button>
+      <button type="button" data-act="jump" class="jump">Jump</button>
+    </div>
+  </div>
+
+  <section id="panel" class="panel"></section>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>

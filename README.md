@@ -1,13 +1,15 @@
 # Minigames
 
 A collection of small vibe-coded browser games and toys.
-Plain static HTML/CSS/JavaScript: no build step, no dependencies, no backend.
+Plain static HTML/CSS/JavaScript: no build step, no backend, and no dependencies beyond
+the few libraries vendored into individual games (see [Third-party code](#third-party-code)).
 
 | Game | Folder |
 |------|--------|
 | Sudoku 3D | `sudoku3d/` |
 | Disco Effects | `disco-effects/` |
 | Transport Racer | `transport-racer/` |
+| Jumper | `jumper/` |
 
 ## Run locally
 
@@ -52,3 +54,9 @@ games.json                       list of game folders shown on the overview
    overview needs this list; its order is the order of the cards).
 4. Link back to the overview with `href="../"`, and keep all other URLs relative
    too, so the game keeps working under a GitHub Pages subfolder.
+
+## Third-party code
+
+| Library | Version | License | Copyright | Vendored files |
+|---------|---------|---------|-----------|----------------|
+| [three.js](https://threejs.org/) | r186 (npm `three@0.186.1`) | MIT | © 2010-2026 three.js authors | `jumper/vendor/three.module.js`, `jumper/vendor/three.core.js` (license text in `jumper/vendor/LICENSE`) |
