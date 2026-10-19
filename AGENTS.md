@@ -17,6 +17,13 @@ served from a subfolder (`https://<user>.github.io/<repo>/`).
   links to games as `<dir>/` (with trailing slash).
 - **No runtime dependencies or CDNs.** Everything is self-contained so it also
   works offline. No bundlers, no `node_modules`, no frameworks.
+  - Exception: a library (e.g. three.js) may be used **only if the user
+    explicitly asks for it**. Vendor the prebuilt file(s) into that game's own
+    folder (e.g. `<game>/vendor/three.module.min.js`), import them with relative
+    URLs, and never load them from a CDN. Add a license notice to the root
+    `README.md` (library name, version, license, copyright holder, and the
+    path of the vendored file), and keep the library's license header or
+    license file next to it.
 - **No backend.** Anything that needs persistence uses `localStorage`, wrapped in
   `try/catch` (see `store` in `sudoku3d/game.js`).
 - Keep `.nojekyll` at the root.
