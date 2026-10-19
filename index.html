@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minigames</title>
+  <meta name="description" content="A collection of small games and toys that run right in your browser.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="grid-floor"></div>
+  </div>
+
+  <header class="hero">
+    <p class="eyebrow">Arcade · runs in your browser</p>
+    <h1>Mini<span>games</span></h1>
+    <p class="lede">Small vibe-coded games and toys. No installs, no accounts — pick one and play.</p>
+    <div class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Search games" autocomplete="off" aria-label="Search games">
+      </label>
+      <div id="tags" class="tags" role="group" aria-label="Filter by tag"></div>
+    </div>
+  </header>
+
+  <main>
+    <p id="status" class="status" role="status"></p>
+    <ul id="games" class="games"></ul>
+  </main>
+
+  <footer>
+    <span id="count"></span>
+    <a href="https://github.com/DavidoTek/vibegames">Source on GitHub</a>
+  </footer>
+
+  <template id="card-tpl">
+    <li class="card">
+      <a class="card-link">
+        <div class="thumb"><img alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h2 class="card-title"></h2>
+          <p class="card-desc"></p>
+          <ul class="card-tags"></ul>
+        </div>
+        <span class="play" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </span>
+      </a>
+    </li>
+  </template>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>

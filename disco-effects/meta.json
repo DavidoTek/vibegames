@@ -1,0 +1,8 @@
+{
+  "name": "Disco Effects",
+  "description": "Full-screen light show for a projector at a party: lasers, tunnels, warp stars, plasma and more, all synced to a tap-tempo beat clock.",
+  "tags": ["visuals", "music", "party"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#ff5ab4",
+  "controls": "1-9 pick effect · T tap tempo · A auto-cycle · F fullscreen · F1 help"
+}

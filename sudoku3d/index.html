@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sudoku 3D</title>
+  <link rel="icon" href="thumbnail.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <nav class="corner">
+    <a class="chip" href="../" title="Back to all games">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      <span>Games</span>
+    </a>
+    <button id="mute" class="chip" type="button" title="Sound on/off (M)" aria-pressed="false">
+      <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+      <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>
+    </button>
+  </nav>
+
+  <aside id="hud">
+    <h1 class="title">SUDOKU <span>3D</span></h1>
+    <dl class="stats">
+      <div><dt>Difficulty</dt><dd id="st-diff">Medium</dd></div>
+      <div><dt>Time</dt><dd id="st-time">00:00</dd></div>
+      <div><dt>Mistakes</dt><dd id="st-mistakes">0</dd></div>
+      <div><dt>Hints</dt><dd id="st-hints">0</dd></div>
+    </dl>
+    <div class="progress"><div id="progress-bar"></div></div>
+    <div id="progress-label" class="progress-label">0 / 81</div>
+    <div id="numpad" class="numpad"></div>
+    <div class="actions">
+      <button id="btn-new" class="btn" type="button">New Game</button>
+      <button id="btn-hint" class="btn" type="button">Hint</button>
+    </div>
+    <div id="difficulty" class="difficulty" role="group" aria-label="Difficulty"></div>
+    <ul class="help">
+      <li>click / arrows: select&ensp; 1-9: place</li>
+      <li>0 / Del: clear&ensp; H: hint&ensp; N: new</li>
+      <li>drag: orbit&ensp; wheel / pinch: zoom</li>
+      <li>Q / E: rotate&ensp; Space: reset view</li>
+    </ul>
+  </aside>
+
+  <div id="win" class="win" hidden>
+    <div class="win-title">SOLVED!</div>
+    <div id="win-stats" class="win-stats"></div>
+    <button id="win-new" class="btn" type="button">New puzzle</button>
+  </div>
+
+  <script src="game.js" type="module"></script>
+</body>
+</html>

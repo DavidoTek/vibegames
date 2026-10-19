@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>Disco Effects</title>
+  <link rel="icon" href="thumbnail.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="screen"></canvas>
+
+  <div id="hud" class="panel hud">
+    <div id="status" class="status"></div>
+    <div class="hint">F1 or ? for help</div>
+  </div>
+
+  <div id="help" class="panel help" hidden>
+    <div class="help-head">
+      <h2>Disco Effects — keys</h2>
+      <button id="help-close" class="icon" type="button" aria-label="Close help">✕</button>
+    </div>
+    <div class="help-cols">
+      <dl class="keys">
+        <dt>→ / Space / N</dt><dd>next effect</dd>
+        <dt>← / P</dt><dd>previous effect</dd>
+        <dt>1 – 9</dt><dd>pick effect</dd>
+        <dt>A</dt><dd>auto-cycle on/off</dd>
+        <dt>T</dt><dd>tap tempo (tap 4+ times)</dd>
+        <dt>[ &nbsp;]</dt><dd>BPM −1 / +1</dd>
+        <dt>↑ / ↓</dt><dd>speed</dd>
+        <dt>C</dt><dd>shift colours</dd>
+        <dt>B</dt><dd>blackout on/off</dd>
+        <dt>F / double-click</dt><dd>fullscreen on/off</dd>
+        <dt>H</dt><dd>hide/show info</dd>
+        <dt>F1 / ?</dt><dd>this help</dd>
+      </dl>
+      <ol id="help-effects" class="effects"></ol>
+    </div>
+    <p class="url-hint">Start options via URL: <code>?bpm=128&amp;effect=3&amp;auto=30</code></p>
+  </div>
+
+  <nav id="controls" class="controls" aria-label="Controls">
+    <a class="ctl" href="../" title="Back to all games">⌂</a>
+    <button id="c-prev" class="ctl" type="button" title="Previous effect (←)">◀</button>
+    <button id="c-next" class="ctl" type="button" title="Next effect (→)">▶</button>
+    <button id="c-tap" class="ctl wide" type="button" title="Tap tempo (T)">TAP <span id="c-bpm">124</span></button>
+    <button id="c-auto" class="ctl" type="button" title="Auto-cycle (A)" aria-pressed="false">AUTO</button>
+    <button id="c-color" class="ctl" type="button" title="Shift colours (C)">🎨</button>
+    <button id="c-blackout" class="ctl" type="button" title="Blackout (B)" aria-pressed="false">■</button>
+    <button id="c-full" class="ctl" type="button" title="Fullscreen (F)">⛶</button>
+    <button id="c-help" class="ctl" type="button" title="Help (F1)">?</button>
+  </nav>
+
+  <div id="intro" class="intro">
+    <div class="intro-card">
+      <h1>Disco Effects</h1>
+      <p>Full-screen light effects for a projector. All effects follow a shared beat clock — tap <kbd>T</kbd> along with the music to set the tempo.</p>
+      <div class="intro-buttons">
+        <button id="start-full" class="primary" type="button">Start fullscreen</button>
+        <button id="start-window" type="button">Start in window</button>
+      </div>
+      <p class="warning"><strong>Photosensitivity warning:</strong> effect 9 “Beat Strobe” flashes once per beat (about 2&nbsp;Hz at 120&nbsp;BPM). Leave it out if anyone may be sensitive to flashing lights.</p>
+      <a class="back" href="../">← All games</a>
+    </div>
+  </div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

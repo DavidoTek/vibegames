@@ -1,0 +1,8 @@
+{
+  "name": "Sudoku 3D",
+  "description": "Classic sudoku on a floating, tilting 3D board. Tiles drop in, bounce, and burst into sparks when you complete a row, column or box.",
+  "tags": ["puzzle", "3D", "logic"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#ffc446",
+  "controls": "Click a tile and type 1-9 · drag to orbit · wheel to zoom · H for a hint"
+}
