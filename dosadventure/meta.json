@@ -1,0 +1,8 @@
+{
+  "name": "DOS Adventure",
+  "description": "Explore Uncle Mort's old DOS PC on a glowing CRT. Fix his config, crack his password, glue files back together and beat his games to boot the mysterious PANES.",
+  "tags": ["adventure", "puzzle", "retro"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#4dff88",
+  "controls": "Type DOS commands (HELP, HINT) · tap words to insert them · games: arrows/WASD, Space · Esc quits a program"
+}

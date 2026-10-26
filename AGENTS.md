@@ -103,3 +103,14 @@ console for errors and try both a desktop and a phone-sized viewport.
   flagged with `shared()` survive level changes. Physics is tile-based AABB in
   tile units (x = centre, y = feet) with sub-stepping; jump numbers are tuned so
   maps can assume about 3 tiles up and 6 across.
+- `dosadventure/`: a puzzle adventure on an emulated DOS PC (design in
+  `plan.md`). `screen.js` is the "video card" (80x25 text mode, VGA 320x200
+  and a 640x400 GUI mode) rendered into a 640x400 canvas that `crt.js` shows
+  through a WebGL CRT shader. `fs.js` is a JSON file system (saved as-is),
+  `disk.js` holds every file and clue, `shell.js` is COMMAND.COM (boot,
+  CONFIG.SYS parsing, all commands), `term.js` a promise-based terminal
+  (`await readLine()`), `progress.js` the 7 PANES components and hints. Each
+  program in `apps/` (and `edit.js`) has `start/update/draw/key/pointer` and
+  `controls()` (touch control set); `realtime` programs are drawn every frame. A program's `music` property
+  names its track in `music.js` (step patterns, 16 steps per bar).
+  `main.js` wires the desk (floppy, printer, sticky note, cat), input and saving.

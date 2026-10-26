@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>DOS Adventure</title>
+  <link rel="icon" href="thumbnail.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="corner">
+    <a class="chip" href="../" title="Back to all games">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      <span>Games</span>
+    </a>
+    <button id="btn-settings" class="chip icon" type="button" title="Settings" aria-label="Settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg>
+    </button>
+    <span class="compact-only">
+      <button id="btn-note" class="chip icon" type="button" title="Mort's sticky note" aria-label="Sticky note">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v11l-5 5H5z"/><path d="M14 20v-5h5M8 9h8M8 12.5h5"/></svg>
+      </button>
+      <button id="btn-prints" class="chip icon" type="button" title="Printouts" aria-label="Printouts">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M6 17H4v-7h16v7h-2M7 14h10v7H7z"/></svg>
+        <b id="prints-badge" class="badge" hidden>0</b>
+      </button>
+      <button id="btn-floppy" class="chip" type="button" title="Insert or eject the floppy disk">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h13l3 3v13H4z"/><path d="M8 4v5h8V4M7 20v-6h10v6"/></svg>
+        <span id="floppy-label">Insert</span>
+      </button>
+    </span>
+  </nav>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <main id="desk">
+    <div id="rig">
+      <div id="monitor">
+        <div class="bezel">
+          <div class="glass">
+            <canvas id="crt" aria-label="CRT monitor showing a DOS screen"></canvas>
+            <div class="scanlines" aria-hidden="true"></div>
+            <div id="title-card">
+              <h1>DOS Adventure</h1>
+              <p>Press the power button <span class="pwr-glyph">⏻</span></p>
+            </div>
+          </div>
+          <div class="bezel-foot">
+            <span class="brand">VIBETRON <small>14" Color</small></span>
+            <span class="vents" aria-hidden="true"></span>
+            <span id="led-power" class="led" aria-hidden="true"></span>
+            <button id="btn-power" type="button" title="Power" aria-label="Power">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v8"/><path d="M6.3 6.8a8 8 0 1 0 11.4 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div id="note" class="note" role="button" tabindex="0" title="Mort's checklist (click to enlarge)">
+          <b>PANES needs:</b>
+          <ol id="note-list"></ol>
+          <i>- Mort</i>
+        </div>
+        <button id="cat" type="button" class="cat" hidden aria-label="Byte the cat">
+          <svg viewBox="0 0 64 34" aria-hidden="true"><path d="M6 32c-4-1-4-6 0-8 2-8 12-13 24-13 6 0 10 1 14 3l3-7 3 6 4-5 1 8c4 3 5 8 4 12-1 3-5 4-9 4H6z"/><path d="M5 29c-5 1-6-5-3-6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+          <span class="heart" aria-hidden="true">♥</span>
+        </button>
+      </div>
+      <div id="stand" aria-hidden="true"></div>
+      <div id="case">
+        <div class="drive">
+          <span id="slot" class="slot" title="Drive A: (drop the floppy here)"><span id="slot-disk" class="slot-disk"></span></span>
+          <span id="led-fdd" class="led small" aria-hidden="true"></span>
+          <button id="btn-eject" type="button" title="Eject floppy" aria-label="Eject floppy">⏏</button>
+        </div>
+        <span class="case-badge">486DX2-66</span>
+        <span class="case-leds"><span id="led-hdd" class="led small amber"></span>HDD <span id="led-pc" class="led small"></span>PWR</span>
+        <button id="btn-reset" type="button" title="Reset (reboot)">RESET</button>
+      </div>
+      <div id="printer" title="Dot-matrix printer (use PRINT in DOS)">
+        <div class="printer-body"><span class="printer-slot"></span><span class="printer-label">VIBEJET 9-PIN</span></div>
+        <div id="paper-out" class="paper-out"></div>
+      </div>
+      <div id="tray" aria-label="Printouts"></div>
+      <div id="floppy" class="floppy" title="Floppy disk: click or drag it into drive A:">
+        <span class="shutter"></span>
+        <span class="label">BACKUP 2/2<br><small>- Mort</small></span>
+      </div>
+    </div>
+  </main>
+
+  <div id="controls" hidden></div>
+  <textarea id="kbd" aria-label="Keyboard input" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+      <div id="modal-buttons" class="modal-buttons"></div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+<defs>
+<linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c1614"/><stop offset="1" stop-color="#3a291e"/></linearGradient>
+<linearGradient id="beige" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eee7d2"/><stop offset="1" stop-color="#b2a68a"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#0d1a10"/><stop offset="1" stop-color="#030503"/></radialGradient>
+</defs>
+<rect width="640" height="360" fill="url(#desk)"/>
+<ellipse cx="400" cy="40" rx="320" ry="140" fill="#ffc478" opacity="0.08"/>
+<!-- case and stand -->
+<rect x="130" y="300" width="380" height="44" rx="6" fill="url(#beige)"/>
+<rect x="160" y="318" width="90" height="6" rx="2" fill="#1e1c1a"/>
+<circle cx="440" cy="321" r="3.5" fill="#50ff78"/>
+<polygon points="270,280 370,280 384,300 256,300" fill="#b2a68a"/>
+<!-- monitor -->
+<rect x="150" y="18" width="340" height="268" rx="22" fill="url(#beige)"/>
+<rect x="172" y="36" width="296" height="214" rx="14" fill="url(#glow)" stroke="#36322c" stroke-width="5"/>
+<g font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" fill="#c8ffd2">
+<text x="188" y="66">C:\&gt;TYPE README.TXT</text>
+<text x="188" y="86" fill="#9fdcae">HELLO FROM UNCLE MORT</text>
+<text x="188" y="114">C:\&gt;PANES</text>
+<text x="188" y="134" fill="#ff6a6a">[ ] 2. VIDEO.DRV</text>
+<text x="188" y="152" fill="#ff6a6a">[ ] 3. MOUSE.SYS</text>
+<text x="188" y="170" fill="#6aff8a">[✓] 4. SOUND.DRV</text>
+<text x="188" y="198">C:\&gt;LABYRINT</text>
+<text x="188" y="226">C:\&gt;<tspan fill="#c8ffd2">_</tspan></text>
+</g>
+<g opacity="0.12" stroke="#000" stroke-width="1"><path d="M172 50H468M172 60H468M172 70H468M172 80H468M172 90H468M172 100H468M172 110H468M172 120H468M172 130H468M172 140H468M172 150H468M172 160H468M172 170H468M172 180H468M172 190H468M172 200H468M172 210H468M172 220H468M172 230H468M172 240H468"/></g>
+<text x="180" y="272" font-family="DejaVu Sans, sans-serif" font-weight="800" font-size="12" letter-spacing="3" fill="#605848">VIBETRON</text>
+<circle cx="460" cy="268" r="9" fill="#d8ceb2" stroke="#8a7e66"/>
+<!-- sticky note -->
+<g transform="rotate(-6 120 60)"><rect x="80" y="34" width="86" height="78" fill="#fae25c"/>
+<g font-family="Comic Sans MS, cursive" font-size="10" fill="#3c3214"><text x="88" y="52">PANES needs:</text><text x="88" y="68">☑ HIMEM</text><text x="88" y="82">☐ VIDEO.DRV</text><text x="88" y="96">☐ MOUSE.SYS</text></g></g>
+<!-- floppy -->
+<g transform="rotate(10 560 290)"><rect x="520" y="250" width="78" height="80" rx="4" fill="#2c2e3a"/><rect x="538" y="250" width="44" height="26" fill="#c8ccd6"/><rect x="530" y="296" width="58" height="30" fill="#f6f4ea"/>
+<text x="535" y="314" font-family="Comic Sans MS, cursive" font-size="10" fill="#28327a">BACKUP 2/2</text></g>
+</svg>
