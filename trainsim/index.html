@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rail Dispatcher</title>
+  <link rel="icon" href="thumbnail.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="view"></canvas>
+
+  <header id="top">
+    <a class="chip" href="../" title="Back to all games">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      <span>Games</span>
+    </a>
+    <div class="brand">Rail<b>Dispatcher</b></div>
+
+    <div class="group">
+      <button id="play" class="chip icon" type="button" title="Pause / run (Space)">
+        <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+        <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>
+      </button>
+      <div class="seg" id="speeds" role="group" aria-label="Simulation speed">
+        <button type="button" data-speed="1">1×</button>
+        <button type="button" data-speed="2">2×</button>
+        <button type="button" data-speed="4">4×</button>
+        <button type="button" data-speed="8">8×</button>
+      </div>
+      <div class="clock" id="clock" title="Game time">06:00</div>
+    </div>
+
+    <div class="group">
+      <button id="usage" class="chip" type="button" title="Show how busy each track is (U)" aria-pressed="false">Usage</button>
+      <button id="undo" class="chip icon" type="button" title="Undo (Ctrl+Z)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg>
+      </button>
+      <button id="fit" class="chip icon" type="button" title="Fit map to screen (F)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      </button>
+      <button id="panelBtn" class="chip" type="button" title="Lines, statistics and details" aria-pressed="true">Panel</button>
+      <button id="menuBtn" class="chip icon" type="button" title="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="menu" class="menu" hidden>
+      <button type="button" data-menu="help">How to play</button>
+      <button type="button" data-menu="reset">Reset to starting map</button>
+      <button type="button" data-menu="clear">Clear map</button>
+      <button type="button" data-menu="export">Save map to file</button>
+      <button type="button" data-menu="import">Load map from file</button>
+      <button type="button" data-menu="resetStats">Reset statistics</button>
+    </div>
+    <input id="file" type="file" accept=".json,application/json" hidden>
+  </header>
+
+  <nav id="tools" aria-label="Tools">
+    <button type="button" data-tool="select" title="Select & pan (1)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3l12 9-5 1 3 6-3 1-3-6-4 3z"/></svg><span>Select</span>
+    </button>
+    <button type="button" data-tool="track" title="Lay track: drag between grid points (2)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3L5 21M16 3l3 18M6 7h12M5.5 12h13M5 17h14"/></svg><span>Track</span>
+    </button>
+    <button type="button" data-tool="platform" title="Platform / station: drag along track (3)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="6" rx="1"/><path d="M3 5h18M3 19h18"/></svg><span>Station</span>
+    </button>
+    <button type="button" data-tool="signal" title="Signal: tap track just before where trains should stop (4)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="13" rx="4"/><circle cx="12" cy="6" r="1.6"/><circle cx="12" cy="11" r="1.6"/><path d="M12 15v7"/></svg><span>Signal</span>
+    </button>
+    <button type="button" data-tool="erase" title="Erase: tap or drag over track (5)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16l9-9 7 7-6 6H8z"/><path d="M9 11l7 7"/></svg><span>Erase</span>
+    </button>
+  </nav>
+
+  <aside id="panel">
+    <div class="tabs" role="tablist">
+      <button type="button" data-tab="lines" role="tab">Lines</button>
+      <button type="button" data-tab="stats" role="tab">Stats</button>
+      <button type="button" data-tab="info" role="tab">Details</button>
+    </div>
+    <div id="tab-lines" class="tab"></div>
+    <div id="tab-stats" class="tab"></div>
+    <div id="tab-info" class="tab"></div>
+  </aside>
+
+  <div id="hint" class="hint" hidden></div>
+  <div id="toast" class="toast" hidden></div>
+
+  <dialog id="help">
+    <h2>Rail Dispatcher</h2>
+    <p>Build a railway, set up lines and watch the automatic dispatcher route
+      trains through it. Find out where your network runs out of capacity.</p>
+    <h3>Building</h3>
+    <ul>
+      <li><b>Track</b>: drag from one grid point to another. The track runs
+        straight and then at 45° (start the drag diagonally to get diagonal first).
+        Trains can turn at most 45° at a point, so where several tracks meet at
+        such angles you get a <b>switch</b>.</li>
+      <li><b>Station</b>: drag along existing track to turn it into a platform.
+        Platforms close to an existing station join it, otherwise a new station is
+        founded. Each platform track can hold one train.</li>
+      <li><b>Signal</b>: tap the track just before the point where trains should
+        stop. Tap again to make it <b>one-way</b> (ringed lamp, trains may not pass
+        it from behind), a third tap removes it.</li>
+      <li><b>Erase</b>: tap or drag over track.</li>
+    </ul>
+    <h3>How trains run</h3>
+    <p>Before moving, a train reserves its route up to the next signal facing it,
+      or all the way to its platform if there is none. Reserved track is shown in
+      the line colour and nobody else can use it, so trains never collide; more
+      signals mean more trains can share a line. Trains pick free platforms and
+      reverse at the end of a line by themselves.</p>
+    <p>Avoid signals in the middle of single-track sections: two trains can
+      meet there and get stuck. A train stuck for 10 game minutes is towed away
+      and counted as a <b>deadlock</b>.</p>
+    <h3>Lines &amp; capacity</h3>
+    <p>In the <b>Lines</b> panel add stops (tap stations on the map), choose a
+      train type and the number of trains. <b>Analyze capacity</b> simulates the
+      map with 1 to 8 trains on that line and shows where more trains stop
+      helping. <b>Usage</b> colours tracks by how often they are reserved, and the
+      <b>Stats</b> tab lists the signals where trains wait most: your bottlenecks.</p>
+    <h3>Controls</h3>
+    <p>Drag to pan (two fingers on touch, or right/middle mouse in any tool),
+      wheel or pinch to zoom. Keys: 1–5 tools, Space pause, U usage, F fit,
+      Ctrl+Z undo, Esc cancel.</p>
+    <form method="dialog"><button class="btn primary">Let's go</button></form>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

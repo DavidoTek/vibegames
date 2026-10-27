@@ -124,3 +124,13 @@ console for errors and try both a desktop and a phone-sized viewport.
   lanes, Canvas piano roll / drum grid, on-screen keyboard and sound panel.
   Songs autosave to `localStorage` and every edit goes through `snapshot()`
   for undo.
+- `trainsim/`: Rail Dispatcher, a 2D railway builder and dispatching sim on
+  Canvas 2D. `sim.js` has no DOM: the layout (plain JSON: track edge keys,
+  platforms, signals, stations, lines), `Net` (graph rebuilt after every edit;
+  edges join neighbouring grid points, trains turn at most 45° per node, so
+  switches emerge on their own; directed edge id = edge * 2 + side) and `Sim`
+  (trains reserve track up to the next signal facing them or their platform,
+  Dijkstra routing with platform choice and reversing at stops, a deadlock
+  breaker, usage statistics). `analyze()` runs headless copies of `Sim` for
+  the capacity analysis. `map.js` builds the starting map, `app.js` is
+  rendering, tools and panels.

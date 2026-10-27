@@ -12,6 +12,7 @@ the few libraries vendored into individual games (see [Third-party code](#third-
 | Jumper | `jumper/` |
 | DOS Adventure | `dosadventure/` |
 | WebDAW | `webdaw/` |
+| Rail Dispatcher | `trainsim/` |
 
 ## Run locally
 

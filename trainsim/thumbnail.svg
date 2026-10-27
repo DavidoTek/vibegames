@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+<rect width="640" height="360" fill="#11151d"/>
+<g fill="#232b3a">
+<circle cx="40" cy="40" r="2"/><circle cx="120" cy="40" r="2"/><circle cx="200" cy="40" r="2"/><circle cx="280" cy="40" r="2"/><circle cx="360" cy="40" r="2"/><circle cx="440" cy="40" r="2"/><circle cx="520" cy="40" r="2"/><circle cx="600" cy="40" r="2"/>
+<circle cx="40" cy="320" r="2"/><circle cx="120" cy="320" r="2"/><circle cx="200" cy="320" r="2"/><circle cx="280" cy="320" r="2"/><circle cx="360" cy="320" r="2"/><circle cx="440" cy="320" r="2"/><circle cx="520" cy="320" r="2"/><circle cx="600" cy="320" r="2"/>
+</g>
+<!-- platforms -->
+<g stroke="#2a3954" stroke-width="26">
+<path d="M230 140H410M230 180H410M230 220H410M230 260H410"/>
+</g>
+<!-- track -->
+<g stroke="#1b212d" stroke-width="13" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 180H640M0 220H640M150 180L190 140H450L490 180M150 220L190 260H450L490 220M90 180L130 220M510 220L550 180M450 140L540 50H640"/>
+</g>
+<g stroke="#8e99ad" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 180H640M0 220H640M150 180L190 140H450L490 180M150 220L190 260H450L490 220M90 180L130 220M510 220L550 180M450 140L540 50H640"/>
+</g>
+<!-- reservations -->
+<g stroke-width="10" fill="none" stroke-linecap="round" opacity="0.45">
+<path d="M400 140H450L540 50H640" stroke="#47d18c"/>
+<path d="M60 220H90" stroke="#3fa7ff"/>
+<path d="M400 220H490L510 220L550 180H640" stroke="#ff5a5f"/>
+</g>
+<!-- trains -->
+<g stroke-width="16">
+<path d="M300 140H330M336 140H366M372 140H400" stroke="#47d18c"/>
+<path d="M290 220H322M328 220H360M366 220H398" stroke="#ff5a5f"/>
+<path d="M-10 220H18M24 220H56" stroke="#3fa7ff"/>
+<path d="M240 260H262M268 260H290M296 260H318M324 260H346" stroke="#5d4a2a"/>
+</g>
+<path d="M240 260H346" stroke="#ffc145" stroke-width="5" stroke-dasharray="22 6"/>
+<g fill="#fff6d0"><circle cx="397" cy="140" r="3.5"/><circle cx="395" cy="220" r="3.5"/><circle cx="53" cy="220" r="3.5"/></g>
+<!-- signals -->
+<g stroke="#6c778c" stroke-width="2"><path d="M418 140v14M418 220v14M178 180v-14M120 220v14"/></g>
+<circle cx="418" cy="156" r="6" fill="#47d18c"/>
+<circle cx="418" cy="236" r="6" fill="#47d18c"/>
+<circle cx="178" cy="164" r="6" fill="#ff4d52"/>
+<circle cx="120" cy="236" r="6" fill="#ff4d52"/>
+<circle cx="120" cy="236" r="10" fill="none" stroke="#e8edf5" stroke-width="2"/>
+<!-- label -->
+<rect x="268" y="92" width="104" height="26" rx="13" fill="#141a26" stroke="#34415a"/>
+<text x="320" y="110" fill="#e4e9f2" font-family="system-ui, sans-serif" font-size="15" font-weight="600" text-anchor="middle">Central</text>
+</svg>

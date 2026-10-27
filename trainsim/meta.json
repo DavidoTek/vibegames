@@ -1,0 +1,8 @@
+{
+  "name": "Rail Dispatcher",
+  "description": "Build a railway with track, switches, platforms and signals, run lines on it and watch the automatic dispatcher route trains. Find the bottlenecks and how many trains each line can take.",
+  "tags": ["simulation", "trains", "builder"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#ffc145",
+  "controls": "Drag to pan, wheel/pinch to zoom · 1–5 tools: select, track (drag between grid points), station, signal (tap), erase · Space pause · U usage map · Ctrl+Z undo"
+}
