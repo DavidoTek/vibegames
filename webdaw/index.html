@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>WebDAW</title>
+  <link rel="icon" href="thumbnail.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="top">
+    <a class="chip" href="../" title="Back to all games">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      <span>Games</span>
+    </a>
+    <div class="brand">Web<b>DAW</b></div>
+
+    <div class="group transport">
+      <button id="play" class="tbtn play" type="button" title="Play / Stop (Space)" aria-pressed="false">
+        <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>
+        <svg class="i-stop" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1.5"/></svg>
+      </button>
+      <button id="rec" class="tbtn rec" type="button" title="Record what you play on the keyboard (R)" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg>
+      </button>
+      <div class="lcd" title="Bar . Beat . Step (click to rename the song)"><span id="pos">1.1.1</span><small id="songName"></small></div>
+      <canvas id="scope" aria-hidden="true"></canvas>
+    </div>
+
+    <div class="group">
+      <label class="field">BPM <input id="bpm" type="number" min="40" max="240" step="1" inputmode="numeric"></label>
+      <label class="field">Swing <input id="swing" type="range" min="0" max="100" step="1"></label>
+      <label class="field">Bars
+        <select id="bars"><option>1</option><option>2</option><option>4</option><option>8</option><option>16</option><option>32</option></select>
+      </label>
+    </div>
+
+    <div class="group">
+      <select id="demo" class="btn" title="Load a demo song">
+        <option value="">Demos…</option>
+      </select>
+      <button id="new" class="btn" type="button" title="New empty song">New</button>
+      <button id="open" class="btn" type="button" title="Open a .webdaw.json file">Open</button>
+      <button id="save" class="btn" type="button" title="Download the song as .webdaw.json">Save</button>
+      <button id="export" class="btn" type="button" title="Render two loops to a WAV file">WAV</button>
+      <button id="help" class="btn icon" type="button" title="Help">?</button>
+      <input id="file" type="file" accept=".json,application/json" hidden>
+    </div>
+
+  </header>
+
+  <section id="lanes" aria-label="Tracks">
+    <div id="laneHeads"></div>
+    <canvas id="laneCanvas"></canvas>
+    <div class="addrow">
+      <select id="addTrack" class="btn" title="Add a track">
+        <option value="">+ Add track</option>
+      </select>
+    </div>
+  </section>
+
+  <section id="editor" aria-label="Note editor">
+    <div class="toolbar">
+      <span id="edTitle" class="ed-title"></span>
+      <label class="field">Grid
+        <select id="snap">
+          <option value="0.5">1/32</option>
+          <option value="1" selected>1/16</option>
+          <option value="2">1/8</option>
+          <option value="4">1/4</option>
+        </select>
+      </label>
+      <button id="zoomOut" class="btn icon" type="button" title="Zoom out">−</button>
+      <button id="zoomIn" class="btn icon" type="button" title="Zoom in">+</button>
+      <button id="clear" class="btn" type="button" title="Remove all notes of this track">Clear</button>
+      <button id="undo" class="btn icon" type="button" title="Undo (Ctrl+Z)">↶</button>
+      <button id="redo" class="btn icon" type="button" title="Redo (Ctrl+Y)">↷</button>
+      <span class="hint">Tap: add / delete · Drag note: move · Drag edge: length · Shift+drag: velocity · Drag empty: scroll</span>
+    </div>
+    <div id="rollWrap"><canvas id="roll"></canvas></div>
+  </section>
+
+  <footer id="bottom" data-tab="keys">
+    <div class="tabs" role="tablist">
+      <button type="button" data-tab="keys" aria-selected="true">Keys</button>
+      <button type="button" data-tab="sound" aria-selected="false">Sound</button>
+    </div>
+    <section id="sound" aria-label="Instrument"></section>
+    <section id="keysPane" aria-label="Keyboard">
+      <div class="kbbar">
+        <button id="octDown" class="btn icon" type="button" title="Octave down (Z)">‹</button>
+        <span id="octLabel"></span>
+        <button id="octUp" class="btn icon" type="button" title="Octave up (X)">›</button>
+      </div>
+      <div id="keys"></div>
+    </section>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="helpDlg">
+    <h2>WebDAW</h2>
+    <p>A small loop-based DAW. Every track loops over the song length (Bars). Pick a track in the
+      lane list, then draw notes in the editor or play them on the keyboard.</p>
+    <ul>
+      <li><b>Space</b> play / stop · <b>R</b> record · <b>Ctrl+Z / Ctrl+Y</b> undo / redo</li>
+      <li><b>A W S E D F T G Y H U J K O L P</b> play notes (laid out like a piano), <b>Z / X</b> octave down / up</li>
+      <li>On drum tracks the home row <b>A S D F G H J K L ;</b> plays the pads.</li>
+      <li>Editor: click or tap an empty cell to add a note, tap a note to delete it (right-click works too),
+        drag a note to move it, drag its right edge to change the length, Shift+drag up/down for velocity.
+        Drag empty space or use the wheel to scroll, Ctrl+wheel to zoom.</li>
+      <li>Recording: arm <b>●</b>, start playback and play the keyboard; notes snap to the grid.</li>
+      <li>Your song is saved in this browser automatically. <b>Save</b> / <b>Open</b> move it as a file,
+        <b>WAV</b> renders two loops to audio.</li>
+    </ul>
+    <form method="dialog"><button class="btn">Close</button></form>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

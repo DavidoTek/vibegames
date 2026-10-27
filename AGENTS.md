@@ -114,3 +114,13 @@ console for errors and try both a desktop and a phone-sized viewport.
   `controls()` (touch control set); `realtime` programs are drawn every frame. A program's `music` property
   names its track in `music.js` (step patterns, 16 steps per bar).
   `main.js` wires the desk (floppy, printer, sticky note, cat), input and saving.
+- `webdaw/`: a small loop-based DAW, all Web Audio, no library. `synth.js`
+  has the `Mixer` (channel strips with drive, shared reverb and tempo-synced
+  delay, compressor) and the instruments in `INSTRUMENTS` (each has `params`,
+  `presets` and `noteOn(ctx, channel, t, pitch, vel, params)` returning
+  `release(t)`; drum tracks use the `DRUMS` row index as pitch). The same code
+  renders WAV files through an `OfflineAudioContext`. `demos.js` holds the demo
+  songs (positions in 16th steps), `app.js` the UI: lookahead scheduler, track
+  lanes, Canvas piano roll / drum grid, on-screen keyboard and sound panel.
+  Songs autosave to `localStorage` and every edit goes through `snapshot()`
+  for undo.

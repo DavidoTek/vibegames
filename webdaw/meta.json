@@ -1,0 +1,8 @@
+{
+  "name": "WebDAW",
+  "description": "A tiny digital audio workstation: draw beats and melodies in a piano roll, play them on the keyboard and shape sounds with an 80s poly, super saw, reese bass and 808 kit. Four demo tracks included.",
+  "tags": ["music", "synth", "sequencer"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#ff4fd8",
+  "controls": "Space play/stop · A–K play notes (Z/X octave) · tap the grid to add/delete notes, drag to move, drag edge to resize · R record · Ctrl+Z undo"
+}

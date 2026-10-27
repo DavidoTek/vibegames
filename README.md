@@ -11,6 +11,7 @@ the few libraries vendored into individual games (see [Third-party code](#third-
 | Transport Racer | `transport-racer/` |
 | Jumper | `jumper/` |
 | DOS Adventure | `dosadventure/` |
+| WebDAW | `webdaw/` |
 
 ## Run locally
 

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d1030"/><stop offset="1" stop-color="#0a0912"/></linearGradient>
+<linearGradient id="wk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1eefa"/><stop offset="1" stop-color="#cfc8e6"/></linearGradient>
+<linearGradient id="bars" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff4fd8"/><stop offset="1" stop-color="#39d5ff"/></linearGradient>
+</defs>
+<rect width="640" height="360" fill="url(#bg)"/>
+<!-- piano roll grid -->
+<g fill="#ffffff" opacity="0.05"><rect x="40" y="30" width="560" height="14"/><rect x="40" y="58" width="560" height="14"/><rect x="40" y="86" width="560" height="14"/><rect x="40" y="114" width="560" height="14"/><rect x="40" y="142" width="560" height="14"/><rect x="40" y="170" width="560" height="14"/></g>
+<g stroke="#ffffff" stroke-opacity="0.18"><path d="M40 24V204M180 24V204M320 24V204M460 24V204M600 24V204"/></g>
+<g stroke="#ffffff" stroke-opacity="0.07"><path d="M75 24V204M110 24V204M145 24V204M215 24V204M250 24V204M285 24V204M355 24V204M390 24V204M425 24V204M495 24V204M530 24V204M565 24V204"/></g>
+<!-- notes -->
+<g fill="#ff4fd8"><rect x="42" y="170" width="30" height="13" rx="4"/><rect x="112" y="170" width="30" height="13" rx="4"/><rect x="182" y="170" width="30" height="13" rx="4"/><rect x="252" y="170" width="30" height="13" rx="4"/><rect x="322" y="170" width="30" height="13" rx="4"/><rect x="392" y="170" width="30" height="13" rx="4"/><rect x="462" y="170" width="30" height="13" rx="4"/><rect x="532" y="170" width="30" height="13" rx="4"/></g>
+<g fill="#39d5ff"><rect x="42" y="114" width="66" height="13" rx="4"/><rect x="112" y="86" width="66" height="13" rx="4"/><rect x="182" y="58" width="134" height="13" rx="4"/><rect x="322" y="86" width="66" height="13" rx="4"/><rect x="392" y="114" width="100" height="13" rx="4"/><rect x="497" y="30" width="100" height="13" rx="4"/></g>
+<g fill="#ffb547"><rect x="42" y="142" width="274" height="13" rx="4" opacity="0.8"/><rect x="322" y="142" width="274" height="13" rx="4" opacity="0.8"/></g>
+<rect x="250" y="20" width="4" height="190" fill="#ff4fd8"/>
+<!-- spectrum -->
+<g fill="url(#bars)"><rect x="440" y="226" width="10" height="10"/><rect x="454" y="214" width="10" height="22"/><rect x="468" y="206" width="10" height="30"/><rect x="482" y="216" width="10" height="20"/><rect x="496" y="222" width="10" height="14"/><rect x="510" y="212" width="10" height="24"/><rect x="524" y="224" width="10" height="12"/><rect x="538" y="218" width="10" height="18"/><rect x="552" y="228" width="10" height="8"/><rect x="566" y="224" width="10" height="12"/><rect x="580" y="230" width="10" height="6"/></g>
+<text x="40" y="236" font-family="system-ui, sans-serif" font-size="34" font-weight="800" fill="#ece8ff">Web<tspan fill="#ff4fd8">DAW</tspan></text>
+<!-- keyboard -->
+<g transform="translate(0 250)">
+<rect width="640" height="110" fill="#0a0912"/>
+<g fill="url(#wk)" stroke="#0a0912" stroke-width="2">
+<rect x="0" y="0" width="40" height="110"/><rect x="40" y="0" width="40" height="110"/><rect x="80" y="0" width="40" height="110"/><rect x="120" y="0" width="40" height="110"/><rect x="160" y="0" width="40" height="110"/><rect x="200" y="0" width="40" height="110"/><rect x="240" y="0" width="40" height="110"/><rect x="280" y="0" width="40" height="110"/><rect x="320" y="0" width="40" height="110"/><rect x="360" y="0" width="40" height="110"/><rect x="400" y="0" width="40" height="110"/><rect x="440" y="0" width="40" height="110"/><rect x="480" y="0" width="40" height="110"/><rect x="520" y="0" width="40" height="110"/><rect x="560" y="0" width="40" height="110"/><rect x="600" y="0" width="40" height="110"/>
+</g>
+<rect x="120" y="0" width="40" height="110" fill="#39d5ff" stroke="#0a0912" stroke-width="2"/>
+<g fill="#1a1626"><rect x="27" y="0" width="26" height="66"/><rect x="67" y="0" width="26" height="66"/><rect x="147" y="0" width="26" height="66"/><rect x="187" y="0" width="26" height="66"/><rect x="227" y="0" width="26" height="66"/><rect x="307" y="0" width="26" height="66"/><rect x="347" y="0" width="26" height="66"/><rect x="427" y="0" width="26" height="66"/><rect x="467" y="0" width="26" height="66"/><rect x="507" y="0" width="26" height="66"/><rect x="587" y="0" width="26" height="66"/></g>
+<rect x="187" y="0" width="26" height="66" fill="#ff4fd8"/>
+</g>
+</svg>
