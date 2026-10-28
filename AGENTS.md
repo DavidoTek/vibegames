@@ -134,3 +134,15 @@ console for errors and try both a desktop and a phone-sized viewport.
   breaker, usage statistics). `analyze()` runs headless copies of `Sim` for
   the capacity analysis. `map.js` builds the starting map, `app.js` is
   rendering, tools and panels.
+- `antcolony/`: a pixel-art side-scroller on Canvas 2D. The game draws into a
+  low-res canvas that is scaled up by a whole number (nearest neighbour).
+  `levels.js` holds the ASCII maps (written as bottom-aligned sections that
+  are glued together), signs, zones and bird ranges. `art.js` has the 3x5
+  font, sprites, tile painter and parallax backgrounds. `game.js` holds the
+  rest: `World` (tiles, entities, a terrain canvas repainted per changed
+  cell) and `Game`. The leader is the only physical ant. The rest of the
+  colony replays the leader's position trail (`trail`, one crumb per 0.5px,
+  `SPACING` crumbs apart), so followers never get stuck. When the leader
+  dies, the trail is cut at the next ant, which takes over. Dead ants become
+  `S` tiles that hold if something is below or beside them, which is what
+  makes bridges.

@@ -13,6 +13,7 @@ the few libraries vendored into individual games (see [Third-party code](#third-
 | DOS Adventure | `dosadventure/` |
 | WebDAW | `webdaw/` |
 | Rail Dispatcher | `trainsim/` |
+| Ant Colony | `antcolony/` |
 
 ## Run locally
 

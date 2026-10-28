@@ -1,0 +1,8 @@
+{
+  "name": "Ant Colony",
+  "description": "A pixel-art side-scroller at insect scale. Lead your colony to a new nest: dead ants turn to stone, so sacrifice yourself to build bridges and steps, then carry on as the next ant. Hide from birds, ride grasshoppers, wake beetles.",
+  "tags": ["platformer", "puzzle", "pixel art"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#e8783c",
+  "controls": "A/D walk · Space jump · W climb · S dig / drop · hold X turn to stone · R restart · P pause"
+}
