@@ -1,0 +1,8 @@
+{
+  "name": "Twin Throttle",
+  "description": "A 3D arcade circuit racer. Three laps on three tracks against computer drivers, alone or with a friend online (peer-to-peer).",
+  "tags": ["racing", "3D", "multiplayer", "three.js"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#ff4858",
+  "controls": "W/↑ gas · S/↓ brake · A/D steer · Space drift · C camera · Tab results · Esc pause · touch and gamepad too"
+}

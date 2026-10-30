@@ -96,7 +96,7 @@ console for errors and try both a desktop and a phone-sized viewport.
   polygons are batched per colour into `Path2D`s. Sprites and boxes are sorted
   far to near and clipped at hill crests via `clipY`.
 - `jumper/`: side-scrolling platformer rendered with three.js (vendored in
-  `jumper/vendor/`, the only game with a library). `levels.js` holds the ASCII
+  `jumper/vendor/`). `levels.js` holds the ASCII
   level maps and their colour themes; `game.js` has the rest. `World` turns a
   map into a collision grid plus meshes (static tiles as `InstancedMesh`es) and
   owns everything per-level, so `dispose()` can drop it; geometries/materials
@@ -146,3 +146,18 @@ console for errors and try both a desktop and a phone-sized viewport.
   dies, the trail is cut at the next ant, which takes over. Dead ants become
   `S` tiles that hold if something is below or beside them, which is what
   makes bridges.
+- `carracer/`: Twin Throttle, a 3D circuit racer (three.js and PeerJS, both
+  vendored in `carracer/vendor/`; design in `plan.md`). `track.js`, `car.js`,
+  `ai.js` and `race.js` have no DOM or three.js, so a race can run headless
+  in Node (handy for tuning the AI). `Track` resamples a closed Catmull-Rom
+  spline every 2 m; `project()` only searches near the car's last position,
+  which keeps the figure-of-eight crossing and hairpins unambiguous. Barriers
+  are a lateral clamp, so cars never leave the track. `race.js` counts laps
+  by unwrapped distance; each car's laps are "owned" by one machine (a human
+  car by its player, AI by the host or the solo player) and the rest arrive
+  over the network. `scene.js` builds the terrain, road ribbons, bridge,
+  props and car models; `net.js` wraps PeerJS (loaded only when the player
+  presses Host or Join), with a reliable "ctl" channel for events and an
+  unordered "state" channel for 20 Hz snapshots in host-clock time. `game.js`
+  is the loop, camera, HUD, menus and results overlay. Open with `?debug` to
+  get `window.game` in the console.

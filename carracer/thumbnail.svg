@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5f9fe0"/><stop offset="1" stop-color="#ffdcae"/></linearGradient>
+<linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a5e68"/><stop offset="1" stop-color="#3c3f47"/></linearGradient>
+</defs>
+<rect width="640" height="360" fill="url(#sky)"/>
+<!-- hills and pines -->
+<path d="M0 200 Q120 130 240 190 T470 180 T640 170 V230 H0Z" fill="#5d9a52"/>
+<g fill="#2f6b3a">
+<path d="M70 196 l14 -40 l14 40z"/><path d="M98 200 l11 -32 l11 32z"/><path d="M520 186 l15 -44 l15 44z"/><path d="M552 190 l11 -30 l11 30z"/><path d="M590 184 l13 -38 l13 38z"/>
+</g>
+<!-- road in perspective, curving right -->
+<path d="M-40 360 C120 300 230 250 300 214 C340 196 400 190 470 190 L500 190 C420 196 380 206 352 222 C300 252 300 300 360 360Z" fill="url(#road)"/>
+<path d="M-40 360 C120 300 230 250 300 214 C340 196 400 190 470 190" fill="none" stroke="#f2f2ee" stroke-width="4"/>
+<path d="M360 360 C300 300 300 252 352 222 C380 206 420 196 500 190" fill="none" stroke="#f2f2ee" stroke-width="4"/>
+<path d="M330 214 l14 -6 M286 248 l18 -12 M210 300 l26 -18" stroke="#f2f2ee" stroke-width="3"/>
+<!-- kerb -->
+<path d="M352 222 C300 252 300 300 360 360" fill="none" stroke="#d8312a" stroke-width="10" stroke-dasharray="16 16"/>
+<!-- far car (blue) -->
+<g transform="translate(372 196)">
+<rect x="-17" y="-2" width="34" height="12" rx="3" fill="#2f6bff"/><rect x="-11" y="-10" width="22" height="9" rx="2" fill="#1d2633"/>
+<rect x="-18" y="8" width="7" height="6" fill="#111"/><rect x="11" y="8" width="7" height="6" fill="#111"/>
+<rect x="-14" y="1" width="6" height="3" fill="#ff3030"/><rect x="8" y="1" width="6" height="3" fill="#ff3030"/>
+</g>
+<!-- near car (red), seen from behind -->
+<g transform="translate(250 285)">
+<ellipse cx="0" cy="40" rx="78" ry="12" fill="#000" opacity="0.3"/>
+<rect x="-70" y="-6" width="140" height="38" rx="9" fill="#e8312a"/>
+<rect x="-46" y="-38" width="92" height="34" rx="7" fill="#1d2633"/>
+<rect x="-74" y="-46" width="148" height="8" rx="2" fill="#23252b"/>
+<rect x="-40" y="-40" width="5" height="12" fill="#23252b"/><rect x="35" y="-40" width="5" height="12" fill="#23252b"/>
+<rect x="-80" y="18" width="26" height="26" rx="5" fill="#1b1b1e"/><rect x="54" y="18" width="26" height="26" rx="5" fill="#1b1b1e"/>
+<rect x="-58" y="4" width="26" height="8" rx="2" fill="#ff3030"/><rect x="32" y="4" width="26" height="8" rx="2" fill="#ff3030"/>
+<rect x="-14" y="10" width="28" height="12" rx="2" fill="#f4f4f4"/>
+</g>
+<!-- title -->
+<text x="32" y="64" font-family="DejaVu Sans, Segoe UI, sans-serif" font-size="46" font-weight="900" font-style="italic" fill="#fff" stroke="#14172a" stroke-width="2">TWIN <tspan fill="#ff4858">THROTTLE</tspan></text>
+</svg>

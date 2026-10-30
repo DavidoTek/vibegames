@@ -14,6 +14,7 @@ the few libraries vendored into individual games (see [Third-party code](#third-
 | WebDAW | `webdaw/` |
 | Rail Dispatcher | `trainsim/` |
 | Ant Colony | `antcolony/` |
+| Twin Throttle | `carracer/` |
 
 ## Run locally
 
@@ -64,3 +65,5 @@ games.json                       list of game folders shown on the overview
 | Library | Version | License | Copyright | Vendored files |
 |---------|---------|---------|-----------|----------------|
 | [three.js](https://threejs.org/) | r186 (npm `three@0.186.1`) | MIT | © 2010-2026 three.js authors | `jumper/vendor/three.module.js`, `jumper/vendor/three.core.js` (license text in `jumper/vendor/LICENSE`) |
+| [three.js](https://threejs.org/) | r186 (npm `three@0.186.1`) | MIT | © 2010-2026 three.js authors | `carracer/vendor/three.module.js`, `carracer/vendor/three.core.js` (license text in `carracer/vendor/LICENSE`) |
+| [PeerJS](https://peerjs.com/) | 1.5.5 (npm `peerjs@1.5.5`, `dist/peerjs.min.js`) | MIT | © 2015 Michelle Bu and Eric Zhang | `carracer/vendor/peerjs.min.js` (license text in `carracer/vendor/LICENSE-peerjs`) |
