@@ -1,0 +1,62 @@
+# Orte
+Eiffelturm
+Freiheitsstatue
+Big Ben
+Pyramiden
+Chinesische Mauer
+Kolosseum
+Schiefer Turm von Pisa
+Taj Mahal
+Mount Everest
+Nordpol
+Sahara
+Amazonas
+Niagarafälle
+Grand Canyon
+Hollywood
+Las Vegas
+New York
+Paris
+London
+Rom
+Venedig
+Berlin
+Brandenburger Tor
+Neuschwanstein
+Zugspitze
+Bodensee
+Ostsee
+Tokio
+Sydney
+Ägypten
+Australien
+Kanada
+Brasilien
+Japan
+Italien
+Spanien
+Mexiko
+Indien
+Island
+Hawaii
+Antarktis
+Mond
+Raumstation
+Krankenhaus
+Schule
+Bibliothek
+Gefängnis
+Burg
+Kirche
+Zoo
+Bauernhof
+Bäckerei
+Fitnessstudio
+Restaurant
+Spielplatz
+Friedhof
+Waschanlage
+Tankstelle
+Brücke
+Hafen
+Wolkenkratzer

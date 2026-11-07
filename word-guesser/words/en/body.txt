@@ -1,0 +1,61 @@
+# Body & Health
+Heart
+Brain
+Lungs
+Stomach
+Skeleton
+Muscle
+Skin
+Eyebrow
+Eyelash
+Nose
+Ear
+Tongue
+Tooth
+Lips
+Chin
+Elbow
+Knee
+Ankle
+Belly button
+Thumb
+Fingernail
+Freckles
+Dimples
+Beard
+Moustache
+Ponytail
+Bald head
+Goosebumps
+Sneeze
+Hiccups
+Snoring
+Headache
+Toothache
+Fever
+Cold
+Sore throat
+Plaster
+Bandage
+Crutches
+Wheelchair
+Ambulance
+Pill
+Injection
+Thermometer
+Stethoscope
+X-ray
+Plaster cast
+Glasses
+Braces
+Toothpaste
+Massage
+Sauna
+Push-up
+Sit-up
+Stretching
+Sweat
+Heartbeat
+Blood pressure
+Allergy
+Mosquito bite

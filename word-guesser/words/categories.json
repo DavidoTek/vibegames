@@ -1,0 +1,17 @@
+[
+  { "id": "everyday", "color": "#ff9f1c", "name": { "en": "Everyday", "de": "Alltag" } },
+  { "id": "animals", "color": "#2ec4b6", "name": { "en": "Animals", "de": "Tiere" } },
+  { "id": "food", "color": "#ff5d73", "name": { "en": "Food & Drink", "de": "Essen & Trinken" } },
+  { "id": "holiday", "color": "#00b4ff", "name": { "en": "Holiday & Travel", "de": "Urlaub & Reisen" } },
+  { "id": "celebrations", "color": "#ff4fd8", "name": { "en": "Celebrations", "de": "Feste & Feiern" } },
+  { "id": "music", "color": "#9b5cff", "name": { "en": "Music", "de": "Musik" } },
+  { "id": "movies", "color": "#ffcf33", "name": { "en": "Movies & TV", "de": "Film & Fernsehen" } },
+  { "id": "jobs", "color": "#4c7dff", "name": { "en": "Jobs", "de": "Berufe" } },
+  { "id": "technology", "color": "#21d07a", "name": { "en": "Technology", "de": "Technik" } },
+  { "id": "sports", "color": "#ff6b2d", "name": { "en": "Sports", "de": "Sport" } },
+  { "id": "places", "color": "#14b8a6", "name": { "en": "Places", "de": "Orte" } },
+  { "id": "nature", "color": "#7ac943", "name": { "en": "Nature & Weather", "de": "Natur & Wetter" } },
+  { "id": "body", "color": "#ff7aa8", "name": { "en": "Body & Health", "de": "Körper & Gesundheit" } },
+  { "id": "hobbies", "color": "#f2a541", "name": { "en": "Hobbies", "de": "Hobbys" } },
+  { "id": "fantasy", "color": "#b46cff", "name": { "en": "Fantasy & Fairy Tales", "de": "Fantasy & Märchen" } }
+]

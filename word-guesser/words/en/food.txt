@@ -1,0 +1,63 @@
+# Food & Drink
+Pizza
+Spaghetti
+Lasagne
+Hamburger
+Hot dog
+French fries
+Sushi
+Taco
+Burrito
+Pancake
+Waffle
+Croissant
+Pretzel
+Bagel
+Sandwich
+Toast
+Scrambled eggs
+Bacon
+Cereal
+Porridge
+Yogurt
+Cheese
+Fondue
+Popcorn
+Chocolate
+Ice cream
+Cupcake
+Birthday cake
+Donut
+Cookie
+Gummy bears
+Lollipop
+Marshmallow
+Banana
+Pineapple
+Watermelon
+Strawberry
+Lemon
+Avocado
+Coconut
+Carrot
+Broccoli
+Potato
+Onion
+Garlic
+Mushroom
+Corn
+Pumpkin
+Salad
+Soup
+Curry
+Barbecue
+Ketchup
+Mustard
+Honey
+Peanut butter
+Lemonade
+Milkshake
+Smoothie
+Hot chocolate
+Tea
+Orange juice

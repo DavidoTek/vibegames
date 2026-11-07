@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#170b38">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Word Guesser</title>
+  <link rel="icon" href="thumbnail.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <!-- 1. Welcome: language + how to play -->
+  <section id="welcome" class="screen" data-screen>
+    <header class="top">
+      <a class="icon-btn" href="../" data-i18n-label="allGames">
+        <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+      </a>
+      <img class="logo" src="img/logo.svg" alt="Word Guesser">
+      <span class="top-spacer"></span>
+    </header>
+    <main class="body">
+      <h2 class="title" data-i18n="chooseLang">Choose your language</h2>
+      <div class="langs">
+        <button class="lang" type="button" data-lang="en">
+          <img src="img/flag-en.svg" alt=""><span>English</span>
+        </button>
+        <button class="lang" type="button" data-lang="de">
+          <img src="img/flag-de.svg" alt=""><span>Deutsch</span>
+        </button>
+      </div>
+      <h2 class="title" data-i18n="howTitle">How to play</h2>
+      <ol class="howto">
+        <li><span class="step" style="--c:#ff9f1c">📱</span><p data-i18n="how1"></p></li>
+        <li><span class="step" style="--c:#2ec4b6">🗣️</span><p data-i18n="how2"></p></li>
+        <li><span class="step" style="--c:#21d07a">✅</span><p data-i18n="how3"></p></li>
+        <li><span class="step" style="--c:#ff4fd8">⏱️</span><p data-i18n="how4"></p></li>
+      </ol>
+    </main>
+    <footer class="bottom">
+      <button id="continue" class="btn primary wide" type="button"><span data-i18n="cont">Continue</span> →</button>
+    </footer>
+  </section>
+
+  <!-- 2. Setup: round length, options, categories -->
+  <section id="setup" class="screen" data-screen>
+    <header class="top">
+      <a class="icon-btn" href="../" data-i18n-label="allGames">
+        <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+      </a>
+      <img class="logo" src="img/logo.svg" alt="Word Guesser">
+      <span class="top-spacer"></span>
+    </header>
+    <main class="body">
+      <h2 class="title" data-i18n="roundLen">Round length</h2>
+      <div id="times" class="chips" role="radiogroup"></div>
+      <div class="toggles">
+        <button id="opt-sound" class="toggle" type="button" aria-pressed="true">🔊 <span data-i18n="sound"></span></button>
+        <button id="opt-tilt" class="toggle" type="button" aria-pressed="true">📱 <span data-i18n="tiltCtl"></span></button>
+        <button id="opt-swap" class="toggle" type="button" aria-pressed="false">⇅ <span data-i18n="swap"></span></button>
+      </div>
+      <div class="title-row">
+        <h2 class="title" data-i18n="cats">Categories</h2>
+        <button id="toggle-all" class="link" type="button"></button>
+      </div>
+      <div id="cats" class="cats"></div>
+      <p id="setup-msg" class="msg" role="status"></p>
+    </main>
+    <footer class="bottom">
+      <button id="to-lang" class="btn" type="button">🌐 <span data-i18n="language">Language</span></button>
+      <button id="start" class="btn primary" type="button"><span data-i18n="start">Start</span> ▶</button>
+    </footer>
+  </section>
+
+  <!-- 3. Play (landscape; rotated by JS when the viewport stays portrait) -->
+  <section id="play" class="play" data-screen>
+    <div id="stage" class="stage">
+      <canvas id="play-fx" class="fx"></canvas>
+      <div class="play-top">
+        <div class="pill timer" id="timer"><span id="time">1:00</span><i id="time-bar"></i></div>
+        <div class="pill score">✓ <span id="score">0</span></div>
+      </div>
+      <div id="word-box" class="word-box">
+        <div id="word-cat" class="word-cat"></div>
+        <div id="word" class="word"></div>
+      </div>
+      <div class="play-bottom">
+        <button id="menu" class="btn ghost" type="button">← <span data-i18n="menu">Back to menu</span></button>
+        <button id="skip" class="btn danger" type="button"><span data-i18n="skip">Skip word</span> ⏭</button>
+      </div>
+      <div id="flash" class="flash"><span></span></div>
+      <div id="countdown" class="overlay">
+        <p class="ready" data-i18n="ready"></p>
+        <div id="count" class="count"></div>
+        <p id="hint" class="hint"></p>
+      </div>
+      <div id="timeup" class="overlay banner"><p data-i18n="timeUp"></p></div>
+    </div>
+  </section>
+
+  <!-- 4. Results -->
+  <section id="results" class="screen" data-screen>
+    <header class="top">
+      <a class="icon-btn" href="../" data-i18n-label="allGames">
+        <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+      </a>
+      <img class="logo" src="img/logo.svg" alt="Word Guesser">
+      <span class="top-spacer"></span>
+    </header>
+    <main class="body">
+      <div class="hero">
+        <div id="res-score" class="hero-num">0</div>
+        <div id="res-label" class="hero-label"></div>
+        <div id="res-sub" class="hero-sub"></div>
+      </div>
+      <p class="msg small" data-i18n="fixHint"></p>
+      <ul id="res-list" class="res-list"></ul>
+      <canvas id="res-fx" class="fx"></canvas>
+    </main>
+    <footer class="bottom">
+      <button id="res-menu" class="btn" type="button"><span data-i18n="menu">Back to menu</span></button>
+      <button id="res-next" class="btn primary" type="button"><span data-i18n="next">Next round</span> ▶</button>
+    </footer>
+  </section>
+</body>
+</html>

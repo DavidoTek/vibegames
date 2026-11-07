@@ -15,6 +15,7 @@ the few libraries vendored into individual games (see [Third-party code](#third-
 | Rail Dispatcher | `trainsim/` |
 | Ant Colony | `antcolony/` |
 | Twin Throttle | `carracer/` |
+| Word Guesser | `word-guesser/` |
 
 ## Run locally
 

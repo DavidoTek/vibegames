@@ -161,3 +161,15 @@ console for errors and try both a desktop and a phone-sized viewport.
   unordered "state" channel for 20 Hz snapshots in host-clock time. `game.js`
   is the loop, camera, HUD, menus and results overlay. Open with `?debug` to
   get `window.game` in the console.
+- `word-guesser/`: a phone party game (guess the word on your forehead), no
+  library. `words/categories.json` is the category manifest; the words are
+  plain text files in `words/<lang>/<category>.txt` (one per line, `#` for
+  comments), so adding a category means adding it to the manifest, one file
+  per language and a `<symbol>` with the same id in `img/icons.svg`. `app.js`
+  has the screens, the i18n strings (`STRINGS`), settings and round logic;
+  `words.js` the loader and a `Deck` that avoids words seen in earlier rounds;
+  `tilt.js` turns `deviceorientation` into the world "up" vector (no gimbal
+  jumps) for the nod-down / tilt-up gestures; `audio.js` synthesises all
+  sounds; `fx.js` draws confetti. The play stage is CSS-rotated by ±90° when
+  the viewport stays portrait (iOS, rotation lock); Android gets fullscreen and
+  an orientation lock instead.

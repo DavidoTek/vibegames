@@ -1,0 +1,61 @@
+# Sports
+Football
+Basketball
+Tennis
+Golf
+Volleyball
+Handball
+Ice hockey
+Baseball
+Rugby
+Table tennis
+Badminton
+Swimming
+Diving
+Surfing
+Skiing
+Snowboarding
+Ice skating
+Skateboarding
+Cycling
+Marathon
+Sprint
+High jump
+Long jump
+Pole vault
+Javelin
+Boxing
+Karate
+Judo
+Wrestling
+Fencing
+Archery
+Gymnastics
+Yoga
+Weightlifting
+Rowing
+Sailing
+Climbing
+Bowling
+Darts
+Billiards
+Chess
+Horse riding
+Formula One
+Olympic Games
+World Cup
+Goalkeeper
+Referee
+Red card
+Penalty
+Offside
+Trophy
+Gold medal
+Stopwatch
+Whistle
+Cheerleader
+Mascot
+Stadium
+Fan
+Warm-up
+Sumo wrestling

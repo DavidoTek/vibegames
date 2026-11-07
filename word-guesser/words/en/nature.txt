@@ -1,0 +1,61 @@
+# Nature & Weather
+Sun
+Moon
+Star
+Rainbow
+Thunderstorm
+Lightning
+Tornado
+Hurricane
+Snowflake
+Hail
+Fog
+Wind
+Cloud
+Rain
+Puddle
+Icicle
+Avalanche
+Earthquake
+Volcano
+Tsunami
+Mountain
+Valley
+River
+Lake
+Ocean
+Waterfall
+Cave
+Forest
+Jungle
+Desert
+Glacier
+Island
+Beach
+Meadow
+Swamp
+Oak tree
+Sunflower
+Rose
+Cactus
+Mushroom
+Moss
+Leaf
+Acorn
+Pine cone
+Spider web
+Shooting star
+Northern lights
+Eclipse
+Sunrise
+Sunset
+Full moon
+Spring
+Summer
+Autumn
+Winter
+Heatwave
+Drought
+Flood
+Compost
+Bird's nest

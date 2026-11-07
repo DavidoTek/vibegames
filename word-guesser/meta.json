@@ -1,0 +1,8 @@
+{
+  "name": "Word Guesser",
+  "description": "A party game for your phone, in English or German. Hold it on your forehead while your friends describe the word, then nod down if you got it or tilt up to skip. 15 categories, beat the clock.",
+  "tags": ["party", "words", "multiplayer"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#ffcf33",
+  "controls": "Tap or nod down = correct · tilt up or Skip = skip · keyboard: Space/↓ correct, ↑/S skip, Esc menu"
+}

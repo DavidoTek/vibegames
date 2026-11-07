@@ -1,0 +1,61 @@
+# Places
+Eiffel Tower
+Statue of Liberty
+Big Ben
+Pyramids
+Great Wall of China
+Colosseum
+Leaning Tower of Pisa
+Taj Mahal
+Mount Everest
+North Pole
+Sahara
+Amazon
+Niagara Falls
+Grand Canyon
+Hollywood
+Las Vegas
+New York
+Paris
+London
+Rome
+Venice
+Berlin
+Tokyo
+Sydney
+Rio de Janeiro
+Egypt
+Australia
+Canada
+Brazil
+Japan
+Italy
+Spain
+Mexico
+India
+China
+Iceland
+Hawaii
+Antarctica
+Moon
+Space station
+Hospital
+School
+Library
+Prison
+Castle
+Church
+Zoo
+Farm
+Bakery
+Gym
+Cinema
+Restaurant
+Playground
+Cemetery
+Car wash
+Petrol station
+Lighthouse
+Bridge
+Harbour
+Skyscraper

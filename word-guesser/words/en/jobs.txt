@@ -1,0 +1,61 @@
+# Jobs
+Doctor
+Nurse
+Dentist
+Teacher
+Firefighter
+Police officer
+Pilot
+Flight attendant
+Chef
+Waiter
+Baker
+Butcher
+Farmer
+Gardener
+Plumber
+Electrician
+Carpenter
+Painter
+Architect
+Engineer
+Scientist
+Astronaut
+Programmer
+Journalist
+Photographer
+Hairdresser
+Taxi driver
+Bus driver
+Truck driver
+Postman
+Lawyer
+Judge
+Mechanic
+Veterinarian
+Zookeeper
+Lifeguard
+Librarian
+Cashier
+Barista
+Bartender
+Tailor
+Fisherman
+Miner
+Soldier
+Detective
+Magician
+Clown
+Actor
+Singer
+Dancer
+Personal trainer
+Influencer
+Chimney sweep
+Window cleaner
+Tour guide
+Referee
+Surgeon
+Pharmacist
+Accountant
+Security guard
