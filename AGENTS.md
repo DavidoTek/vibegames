@@ -173,3 +173,14 @@ console for errors and try both a desktop and a phone-sized viewport.
   sounds; `fx.js` draws confetti. The play stage is CSS-rotated by ±90° when
   the viewport stays portrait (iOS, rotation lock); Android gets fullscreen and
   an orientation lock instead.
+- `rusekin/`: Rusekin, a pass-and-play hidden-role word game for one phone
+  (six modes, English and German), no library. `engine.js` has no DOM: it
+  builds a round (roles, cards per act, clue order, the list of `steps`),
+  tallies votes and scores, and runs headless in Node. `content.js` holds all
+  words, near-miss pairs, odd sets, missions and Clue Lens prompts as
+  `"English|Deutsch"` strings (`tx()` in `i18n.js` picks a side); `i18n.js`
+  also has the UI strings and mode explanations. `app.js` renders each screen
+  as an HTML string into `#app`, with buttons dispatched through `data-act` →
+  `ACT`. Secrets stay in memory only: an open card or ballot is covered on
+  `visibilitychange`/`blur`, and back navigation asks before quitting.
+  `sw.js` is a network-first service worker for offline play.

@@ -1,0 +1,8 @@
+{
+  "name": "Rusekin",
+  "description": "A pass-and-play party game for one phone, in English or German. Everyone gets a secret word, except whoever is playing a different game. Give clues, vote in secret, unmask them. Six modes.",
+  "tags": ["party", "words", "multiplayer", "bluffing"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#ffcf5a",
+  "controls": "Pass the phone around · tap to reveal and hide your card · tap to vote · works offline"
+}

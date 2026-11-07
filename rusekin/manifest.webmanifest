@@ -1,0 +1,15 @@
+{
+  "name": "Rusekin",
+  "short_name": "Rusekin",
+  "description": "Pass-and-play hidden-role word party game for one phone.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#120b26",
+  "theme_color": "#120b26",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

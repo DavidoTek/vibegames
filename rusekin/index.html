@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#120b26">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Rusekin – a pass-and-play hidden-role word party game for one phone.">
+  <title>Rusekin</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <!-- Decorative background: drifting glows and dust. -->
+  <div class="bg" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+
+  <div id="app" aria-live="polite"></div>
+
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <!-- Covers the screen when the app comes back from the background mid-secret. -->
+  <div id="veil" class="veil" hidden>
+    <div class="veil-box">
+      <div class="veil-icon" aria-hidden="true">🙈</div>
+      <h2 data-veil-title></h2>
+      <p data-veil-sub></p>
+      <button class="btn primary" type="button" data-veil-ok></button>
+    </div>
+  </div>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <h2 id="modal-title"></h2>
+      <p data-modal-body></p>
+      <div class="modal-btns">
+        <button class="btn ghost" type="button" data-modal-no></button>
+        <button class="btn danger" type="button" data-modal-yes></button>
+      </div>
+    </div>
+  </div>
+
+  <noscript>Rusekin needs JavaScript.</noscript>
+</body>
+</html>

@@ -16,6 +16,7 @@ the few libraries vendored into individual games (see [Third-party code](#third-
 | Ant Colony | `antcolony/` |
 | Twin Throttle | `carracer/` |
 | Word Guesser | `word-guesser/` |
+| Rusekin | `rusekin/` |
 
 ## Run locally
 
