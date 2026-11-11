@@ -1,0 +1,8 @@
+{
+  "name": "Enter-a-DOS",
+  "description": "You press the forbidden TURBO button, shrink to 3 mm and get pulled into Uncle Mort's dead PC. Walk the motherboard in first person, fix it one POST line at a time and lure a virus back onto its floppy.",
+  "tags": ["adventure", "3D", "first-person", "three.js"],
+  "thumbnail": "thumbnail.svg",
+  "accent": "#ffb347",
+  "controls": "WASD move · mouse look · Space jump · Shift run · E use · click/F zap · Tab checklist · Esc pause · touch and gamepad too"
+}

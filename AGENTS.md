@@ -184,3 +184,18 @@ console for errors and try both a desktop and a phone-sized viewport.
   `ACT`. Secrets stay in memory only: an open card or ballot is covered on
   `visibilitychange`/`blur`, and back navigation asks before quitting.
   `sw.js` is a network-first service worker for offline play.
+- `enterados/`: Enter-a-DOS, a first-person adventure inside a retro PC
+  (three.js, vendored in `enterados/vendor/`; design in `plan.md`; a loose
+  sequel to `dosadventure/`). `physics.js` and `level.js` have no DOM or
+  three.js, so routes can be checked headless in Node. `level.js` lists the
+  world as solids (box, ramp, cylinder) that feed both the collision grid
+  and the renderer, plus `P`, the places the missions refer to. `props.js`
+  turns the solids into `InstancedMesh`es and builds the special models; all
+  textures are canvases. The player is a vertical cylinder: ground height
+  below, push-out from walls, and solids with `spin` or a moving top (lift,
+  platter, fan) carry it. `missions.js` holds the six missions and the list
+  of things the player can Use (`items`); only finished missions, the probe,
+  screws, secrets and the restore point are saved. `entities.js` has the
+  bugs, the Moth and Blink (the cursor that hovers at the next objective).
+  `game.js` is the loop, states, HUD, zapping and Use. Open with `?debug` to
+  get `window.game` (`game.warp(n)` skips to mission n).

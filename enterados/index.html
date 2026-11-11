@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Enter-a-DOS</title>
+  <link rel="icon" href="thumbnail.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <div id="hurt" aria-hidden="true"></div>
+  <div id="fade" aria-hidden="true"></div>
+
+  <nav class="corner">
+    <a class="chip" href="../" title="Back to all games">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      <span>Games</span>
+    </a>
+    <button id="mute" class="chip icon" type="button" title="Sound on/off (M)" aria-pressed="false">
+      <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+      <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>
+    </button>
+    <button id="pause" class="chip icon" type="button" title="Pause (Esc)" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+    </button>
+  </nav>
+
+  <!-- Mission, objective, integrity -->
+  <div id="hud" class="card" hidden>
+    <div id="objective"></div>
+    <div class="row">
+      <div id="pips" class="pips" aria-label="Integrity"></div>
+      <span id="temp" hidden></span>
+    </div>
+  </div>
+
+  <!-- The POST checklist; click or Tab to shrink it -->
+  <button id="post" class="card" type="button" title="POST checklist (Tab)" hidden>
+    <span class="head">VIBETRON BIOS v2.1</span>
+    <pre id="postLines"></pre>
+  </button>
+
+  <div id="cross" aria-hidden="true" hidden></div>
+  <div id="arrow" aria-hidden="true" hidden><span>&#9650;</span></div>
+  <div id="district" aria-live="polite"></div>
+  <div id="toast" aria-live="polite"></div>
+  <div id="prompt" hidden><kbd>E</kbd> <span id="promptText"></span></div>
+  <div id="note" hidden></div>
+  <div id="sub" aria-live="polite" hidden><b>&#9608;</b> <span id="subText"></span></div>
+
+  <div id="gpf" hidden>
+    <div>
+      <b>GENERAL PROTECTION FAULT</b>
+      <p>Blink is reloading you from the last restore point...</p>
+    </div>
+  </div>
+
+  <div id="touch" hidden>
+    <button type="button" data-act="use" id="useBtn">Use</button>
+    <button type="button" data-act="zap">Zap</button>
+    <button type="button" data-act="jump" class="jump">Jump</button>
+  </div>
+
+  <section id="panel" class="panel"></section>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>

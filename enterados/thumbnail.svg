@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#07120e"/>
+      <stop offset="1" stop-color="#0f5a3a"/>
+    </linearGradient>
+    <linearGradient id="slot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff8dc"/>
+      <stop offset="1" stop-color="#ffb347"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <!-- board with traces -->
+  <path d="M0 132h320v48H0z" fill="#0f5a3a"/>
+  <g stroke="#17754a" stroke-width="2" fill="none">
+    <path d="M10 150h60l14 14h70M120 140h50l10 10h90M200 170h60l12-12h40"/>
+  </g>
+  <g fill="#d9a520"><circle cx="84" cy="164" r="3"/><circle cx="180" cy="150" r="3"/><circle cx="272" cy="158" r="3"/></g>
+  <!-- chips and capacitors as a skyline -->
+  <g fill="#1b1c22">
+    <rect x="14" y="96" width="62" height="36"/>
+    <rect x="228" y="84" width="74" height="48"/>
+  </g>
+  <g fill="#b8bcc4">
+    <rect x="20" y="130" width="4" height="8"/><rect x="34" y="130" width="4" height="8"/><rect x="48" y="130" width="4" height="8"/><rect x="62" y="130" width="4" height="8"/>
+    <rect x="236" y="130" width="4" height="8"/><rect x="254" y="130" width="4" height="8"/><rect x="272" y="130" width="4" height="8"/><rect x="290" y="130" width="4" height="8"/>
+  </g>
+  <rect x="88" y="74" width="20" height="58" rx="3" fill="#2a4fa0"/>
+  <rect x="88" y="74" width="20" height="5" fill="#b8bcc4"/>
+  <rect x="204" y="98" width="16" height="34" rx="3" fill="#23252b"/>
+  <!-- glowing floppy slot -->
+  <rect x="96" y="22" width="128" height="16" rx="3" fill="url(#slot)"/>
+  <path d="M112 38L70 132h180L208 38z" fill="#ffd98a" opacity="0.12"/>
+  <!-- tiny figure -->
+  <g fill="#f4f0e4">
+    <circle cx="160" cy="112" r="4"/>
+    <rect x="157" y="117" width="6" height="11" rx="2"/>
+    <rect x="156" y="127" width="3" height="7"/><rect x="161" y="127" width="3" height="7"/>
+  </g>
+  <!-- Blink the cursor -->
+  <rect x="176" y="98" width="7" height="12" fill="#4dff88"/>
+  <!-- moth -->
+  <g fill="#ff5ad0" opacity="0.9">
+    <path d="M268 40l18-10 4 14-12 8zM268 40l-18-10-4 14 12 8z"/>
+    <rect x="266" y="34" width="4" height="18" rx="2"/>
+  </g>
+  <text x="160" y="66" text-anchor="middle" font-family="DejaVu Sans Mono, monospace" font-weight="bold" font-size="22" fill="#ffb347">Enter-a-DOS</text>
+</svg>
